@@ -2,22 +2,47 @@
 title: "Gapminder Data Analysis Report"
 author: "Jillian Myers"
 date: "January 18, 2017"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+This is an initial report describing changes in life expectancy over the past 60 years as it relates to GDP, country, and continent.  These data were taken from the gapminder dataset. 
+
+```{r load_data, echo=FALSE} 
+gapminder <- read.csv("gapminder-FiveYearData.csv")
+```
+
+The gapminder dataset contains `r ncol(gapminder)` variables from `r nrow(gapminder)` observations. Blah blah blah.  Enter stuff about the data in the graph below.
+
+```{r facet_plot, echo=FALSE, fig.height=3.0, fig.width= 8}
+ggplot(data = gapminder, aes(x = year, y = lifeExp, color = continent)) + geom_point() + facet_grid(. ~continent)
 ```
 
 ## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.  
+
+### Here, Have A Heading
+
+Not sure whether students are wanted to be typing stuff right now.  Just in case, I am typing stuff. Here, I will make a list:
+
+* words and stuff
+* I am making a list
+* This is the third item on the list. 
+* *this will be italics, right?*
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r cars}
 summary(cars)
 ```
+The average speed in our dataset was `r mean(cars$speed)` (sd= `r sd(cars$speed)`).
 
 ## Including Plots
 
