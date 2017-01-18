@@ -1,0 +1,25 @@
+---
+title: "Mouse Goes to Market"
+author: "Jillian Myers"
+date: "January 18, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Mouse Goes to Market:
+*The adventures of a hungry young pup.*
+
+Mouse is a hound dog.  She has an active sniffer.  She sniffs something yummy and now she is hungry. 
+
+Mouse looks for a snack, but finds none.  She decides to go to the market!  What will her grocery list look like?
+
+* Peanut butter
+* Cat food
+* More peanut butter
+* **BEEF!**
+
+Mouse buys her groceries.  The total of her expenses were (if this were for real there would be a back tick here) r sum(mousebill$price) (and another back tick here).
+
