@@ -1,6 +1,7 @@
 #Notes from Software Carpentry Workshop 20170117
 #Date: January 17-18 2017
 #load necessary packages:
+#test lines and stuff mer mer mer. 
 library(ggplot2)
 download.file("https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder-FiveYearData.csv", destfile = "gapminder-FiveYearData.csv")
 gapminder <- read.csv("gapminder-FiveYearData.csv")
