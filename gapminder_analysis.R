@@ -59,3 +59,5 @@ africa_2007[o, ]
 ggplot(data = gapminder, aes(x = year, y = lifeExp, color = continent)) + geom_point() + facet_grid(. ~continent)
 #to save plot above:
 ggsave(filename = "year_vs_lifeExp_byContinent.png", width = 5, height = 4, units = "in")
+
+#sometest text
