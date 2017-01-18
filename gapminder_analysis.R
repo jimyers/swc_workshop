@@ -54,3 +54,8 @@ africa_2007
 #order this dataframeby life expectancy
 o <- order(africa_2007$lifeExp)
 africa_2007[o, ]
+
+#added stuff on day 2:
+ggplot(data = gapminder, aes(x = year, y = lifeExp, color = continent)) + geom_point() + facet_grid(. ~continent)
+#to save plot above:
+ggsave(filename = "year_vs_lifeExp_byContinent.png", width = 5, height = 4, units = "in")
