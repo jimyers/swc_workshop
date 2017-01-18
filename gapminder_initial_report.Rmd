@@ -32,6 +32,12 @@ head(calcGDP(gapminder, year = 2002))
 calcGDP(gapminder, country = "China", year = 2002)
 ```
 
+The "capstone" challenge is to make a faceted plot of GDP overtime, faceted by continent.  Here is how I'm gonna do this:
+
+```{r GDPfacet_plot, echo=TRUE, fig.height=3.0, fig.width= 8, fig.path= "figures/"}
+newcol <- calcGDP(gapminder)
+ggplot(data = newcol, aes(x = year, y = gdp, color = continent)) + geom_point() + facet_grid(. ~continent)
+```
 
 
 ## R Markdown
